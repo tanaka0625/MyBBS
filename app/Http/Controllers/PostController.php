@@ -18,7 +18,7 @@ class PostController extends Controller
         $data = [
             "list_page" => $_GET["list_page"]
         ];
-        return view("Post.index", $data);
+        return view("post.index", $data);
     }
 
     public function add(AddPostRequest $request)
