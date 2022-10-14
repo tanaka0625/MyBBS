@@ -1,0 +1,7 @@
+.reply {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    word-break: break-all;
+
+}
