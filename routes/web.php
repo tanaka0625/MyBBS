@@ -27,7 +27,7 @@ Route::get('/', [ListController::class, 'index']);
 
 Route::group(['middleware' => ['issetPost']], function () {
 
-    Route::get('/delete/{id}', [PostController::class, 'delete']);
+    Route::post('/delete', [PostController::class, 'delete']);
     Route::get('/edit/{id}', [EditController::class, 'index']);
     Route::get('/update/{id}', [EditController::class, 'update']);
     Route::get('/reply/{id}', [ReplyController::class, 'index']);
