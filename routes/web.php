@@ -29,7 +29,7 @@ Route::group(['middleware' => ['issetPost']], function () {
 
     Route::post('/delete', [PostController::class, 'delete']);
     Route::get('/edit/{id}', [EditController::class, 'index']);
-    Route::get('/update/{id}', [EditController::class, 'update']);
+    Route::post('/update', [EditController::class, 'update']);
     Route::get('/reply/{id}', [ReplyController::class, 'index']);
 
 });

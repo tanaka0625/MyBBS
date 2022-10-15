@@ -16,7 +16,7 @@
         </a>
     </div>
 
-    <form action=" {{ url('/update/' .$post->id) }} " method="get">
+    <form action=" {{ url('/update') }} " method="post">
         @csrf
 
         @if ($errors->any())
@@ -33,6 +33,7 @@
         <p>{{$post->maker}}</p>
         <input type="hidden" name="name" value="{{$post->maker}}">
         <input type="hidden" name="list_page" value="{{$list_page}}">
+        <input type="hidden" name="id" value="{{$post->id}}">
         <div>
             <label for="text">本文</label>
             <div>
