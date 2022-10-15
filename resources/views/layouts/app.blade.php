@@ -17,6 +17,7 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @yield('js-link')
 
 </body>
 </html>

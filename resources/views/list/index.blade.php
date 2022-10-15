@@ -30,6 +30,10 @@
     </div>
 
 
+
+@endsection
+
+@section('js-link')
     <script src=" {{ asset('/js/post-menu.js') }} "></script>
     <script src=" {{ asset('/js/confirm-delete.js') }} "></script>
 @endsection
