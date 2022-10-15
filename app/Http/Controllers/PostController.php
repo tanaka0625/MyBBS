@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Reply;
 use App\Http\Requests\AddPostRequest;
 
 class PostController extends Controller
@@ -37,6 +38,9 @@ class PostController extends Controller
     public function delete(Request $request)
     {
         Post::where("id", $request->id)->delete();
+
+        Reply::where("post_id", $request->id)->delete();
+
         return redirect('/?page=' .$request->list_page);
     }
 
